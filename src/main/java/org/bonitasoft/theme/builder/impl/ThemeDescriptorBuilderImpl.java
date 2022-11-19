@@ -19,6 +19,7 @@ package org.bonitasoft.theme.builder.impl;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.logging.Level;
 
@@ -79,7 +80,7 @@ public class ThemeDescriptorBuilderImpl extends AbstractXMLBuilder implements Th
      */
     @Override
     public File createTempXMLFile() throws IOException {
-        return File.createTempFile("themeDescriptor", ".xml");
+        return Files.createTempFile("themeDescriptor", ".xml").toFile();
     }
 
     /**
